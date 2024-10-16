@@ -24,6 +24,7 @@ export default class HolbertonCourse {
 
   /**
    * Sets the name of this course.
+   * Validate the new name(value).
    */
   set name(value) {
     if (typeof value !== 'string') {
@@ -41,6 +42,7 @@ export default class HolbertonCourse {
 
   /**
    * Sets the length of this course (in months).
+   * Validate the value to be a number.
    */
   set length(value) {
     if (typeof value !== 'number') {
@@ -58,6 +60,9 @@ export default class HolbertonCourse {
 
   /**
    * Sets the names of students in this course.
+   * Validate that the upcoming value is an array.
+   * Uses every() to ensure all elements of the upcoming array
+   * are strings.
    */
   set students(value) {
     if (!(value instanceof Array)) {
